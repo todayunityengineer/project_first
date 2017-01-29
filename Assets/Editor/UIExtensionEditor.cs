@@ -66,6 +66,10 @@ public class UITextEditor : UnityEditor.UI.TextEditor
 				if (data == null) {
 					GUI.color= Color.red;
 					EditorGUILayout.HelpBox("Cannot Find Localize Data", MessageType.Warning);
+					if (GUILayout.Button("Reload"))
+					{
+						master = null;
+					}
 				}else{
 					if (!check) {
 						UIText text = (UIText) target;

@@ -12,4 +12,9 @@ public class MyPageMainPresenter : BasePresenter {
 	{
 
 	}
+
+	protected override void OnButtonClick (UIButton btn)
+	{
+		
+	}
 }

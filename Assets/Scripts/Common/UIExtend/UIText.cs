@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 
+[AddComponentMenu("Text")]
 public class UIText : Text 
 {
 	[SerializeField, HideInInspector] string localizeKey;
@@ -18,5 +19,10 @@ public class UIText : Text
 	{
 		if (string.IsNullOrEmpty(key)) text = "";
 		else text = m_localize.Get(key);
+	}
+
+	void Reset()
+	{
+		raycastTarget = false;
 	}
 }

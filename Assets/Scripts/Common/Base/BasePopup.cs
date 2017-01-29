@@ -11,16 +11,15 @@ public abstract class BasePopup : MonoBehaviour, IButtonListener
 	[SerializeField] float openAnimationTime = 0.2f;
 	[SerializeField] float closeAnimationTime = 0.2f;
 
-
 	protected bool isOpen { get; private set; }
 	protected bool isinAnimation { get; private set; }
 
-	public void ButtonClick(GameObject go)
+	public void ButtonClick(UIButton btn)
 	{
-		if (isOpen && !isinAnimation) OnButtonClick(go);
+		if (isOpen && !isinAnimation) OnButtonClick(btn);
 	}
 
-	protected abstract void OnButtonClick(GameObject go);
+	protected abstract void OnButtonClick(UIButton btn);
 
 	protected void Open (Action onOpenAction = null)
 	{

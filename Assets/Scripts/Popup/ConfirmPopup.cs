@@ -6,12 +6,12 @@ using System;
 public class ConfirmPopup : BasePopup 
 {
 	[SerializeField] UIText textConfirm;
-	[SerializeField] GameObject btnConfirm;
+	[SerializeField] UIButton btnConfirm;
 	Action confirmAction;
 
-	protected override void OnButtonClick (GameObject go)
+	protected override void OnButtonClick (UIButton btn)
 	{
-		if (go == btnConfirm) 
+		if (btn == btnConfirm) 
 		{
 			Close(confirmAction);
 		}

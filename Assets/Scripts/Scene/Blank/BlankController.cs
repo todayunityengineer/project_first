@@ -6,8 +6,6 @@ public class BlankController : BaseController
 {
 	public static E.Scenes nextScene = E.Scenes.Blank;
 
-	protected override void OnButtonClick (GameObject go){}
-
 	protected override void Init ()
 	{
 		if (nextScene == E.Scenes.Blank) 

@@ -12,6 +12,4 @@ public class MyPageController : BaseController
 	{
 		ChangePresenter((int)State.Main);
 	}
-
-	protected override void OnButtonClick (GameObject go){}
 }

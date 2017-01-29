@@ -1,23 +1,34 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public abstract class BasePresenter : MonoBehaviour 
+public abstract class BasePresenter : MonoBehaviour , IButtonListener
 {
 	[SerializeField] protected BaseView view;
+
+	protected bool inThisState { get; private set; }
 
 	public void Enter (object[] datas) 
 	{
 		OnEnter(datas);	
+		inThisState = true;
 	}
 
 	protected abstract void OnEnter (object[] datas);
 
 	public void Exit () 
 	{
+		inThisState = false;
 		OnExit();
 	}
 
 	protected abstract void OnExit ();
+
+	public void ButtonClick(UIButton btn)
+	{
+		if (inThisState) OnButtonClick(btn);
+	}
+
+	protected abstract void OnButtonClick(UIButton btn);
 
 	void Reset () 
 	{

@@ -12,11 +12,4 @@ public class TitleController : BaseController
 	{
 		ChangePresenter((int)State.Main);
 	}
-
-	protected override void FadeClose ()
-	{
-	}
-
-	protected override void OnButtonClick (GameObject go){
-	}
 }
