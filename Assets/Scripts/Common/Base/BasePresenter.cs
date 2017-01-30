@@ -3,6 +3,14 @@ using System.Collections;
 
 public abstract class BasePresenter : MonoBehaviour , IButtonListener
 {
+	#if UNITY_EDITOR
+	public bool inState {
+		get{
+			return inThisState;
+		}
+	}
+	#endif
+
 	[SerializeField] protected BaseView view;
 
 	protected bool inThisState { get; private set; }

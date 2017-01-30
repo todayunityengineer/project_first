@@ -4,14 +4,20 @@ using System.Collections;
 
 public class BattleStartPresenter : BasePresenter 
 {
+	BattleStartView battleStartView {
+		get{
+			return view as BattleStartView;
+		}
+	}
+
 	protected override void OnEnter ()
 	{
-		view.SetData();
+		StartCoroutine(battleStartView.CountDown(3, () => transition.ExecuteTransition(0)));
 	}
 
 	protected override void OnExit ()
 	{
-		view.SetDefault();
+
 	}
 
 	protected override void OnButtonClick (UIButton btn)

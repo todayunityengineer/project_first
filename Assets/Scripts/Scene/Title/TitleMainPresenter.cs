@@ -3,16 +3,22 @@ using System.Collections;
 
 public class TitleMainPresenter : BasePresenter 
 {
+	TitleMainView titleMainView {
+		get{
+			return view as TitleMainView;
+		}
+	}
+
 	[SerializeField]UIButton btnStart;
 
 	protected override void OnEnter ()
 	{
-		view.SetData();
+		titleMainView.OnEnter();
 	}
 
 	protected override void OnExit ()
 	{
-		view.SetDefault();
+		titleMainView.OnExit();
 	}
 
 	protected override void OnButtonClick (UIButton btn)

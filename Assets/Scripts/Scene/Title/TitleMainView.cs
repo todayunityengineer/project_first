@@ -5,12 +5,12 @@ public class TitleMainView : BaseView
 {
 	[SerializeField] Animator animator;
 
-	public override void SetData ()
+	public void OnEnter ()
 	{
 		animator.SetTrigger(EnterAnimationName);
 	}
 
-	public override void SetDefault ()
+	public void OnExit ()
 	{
 		animator.SetTrigger(ExitAnimationName);
 	}

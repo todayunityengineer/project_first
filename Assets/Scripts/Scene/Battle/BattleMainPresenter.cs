@@ -5,6 +5,7 @@ public class BattleMainPresenter : BasePresenter
 {
 	protected override void OnEnter ()
 	{
+		Debug.Log("Battle Start");
 	}
 
 	protected override void OnExit ()

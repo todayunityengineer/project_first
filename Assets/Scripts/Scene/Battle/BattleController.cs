@@ -32,4 +32,9 @@ public class BattleController : BaseController
 
 		ChangePresenter((int)State.Start);
 	}
+
+	protected override void FadeClose ()
+	{
+		ChangePresenter((int)State.Start);
+	}
 }

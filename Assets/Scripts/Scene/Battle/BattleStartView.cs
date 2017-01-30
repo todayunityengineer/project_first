@@ -1,25 +1,25 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
 
 public class BattleStartView : BaseView 
 {
-	public override void SetData ()
-	{
-		StartCoroutine(CountDown(3));
-	}
+	[SerializeField] Animator animator;
+	[SerializeField] UIText txtCountdown;
 
-	IEnumerator CountDown(int time)
+	public IEnumerator CountDown(int time, Action endAction)
 	{
+		yield return new WaitForSeconds(1f);
 		while(time != 0)
 		{
+			txtCountdown.text = time.ToString();
+			animator.SetTrigger(EnterAnimationName);
 		
 			yield return new WaitForSeconds(1f);
 			time --;
 		}
-	}
 
-	public override void SetDefault ()
-	{
-
+		animator.SetTrigger(ExitAnimationName);
+		endAction();
 	}
 }
