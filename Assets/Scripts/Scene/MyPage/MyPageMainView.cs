@@ -3,7 +3,7 @@ using System.Collections;
 
 public class MyPageMainView : BaseView 
 {
-	public override void SetData (params object[] datas)
+	public override void SetData (StateData datas)
 	{
 		
 	}

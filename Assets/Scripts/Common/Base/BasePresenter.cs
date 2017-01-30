@@ -7,13 +7,13 @@ public abstract class BasePresenter : MonoBehaviour , IButtonListener
 
 	protected bool inThisState { get; private set; }
 
-	public void Enter (object[] datas) 
+	public void Enter (StateData datas) 
 	{
 		OnEnter(datas);	
 		inThisState = true;
 	}
 
-	protected abstract void OnEnter (object[] datas);
+	protected abstract void OnEnter (StateData datas);
 
 	public void Exit () 
 	{

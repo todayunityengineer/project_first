@@ -6,7 +6,7 @@ public abstract class BaseView : MonoBehaviour
 	protected const string EnterAnimationName = "Enter";
 	protected const string ExitAnimationName = "Exit";
 
-	public abstract void SetData (params object[] datas) ;
+	public abstract void SetData (StateData datas = null) ;
 
 	public virtual void SetDefault(){}
 

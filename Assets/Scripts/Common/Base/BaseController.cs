@@ -20,7 +20,7 @@ public abstract class BaseController : MonoBehaviour
 		}
 	}
 
-	public static void ChangePresenter (int a, params object[] datas)
+	public static void ChangePresenter (int a, StateData datas = null)
 	{
 		if (Instance.presentState != a)
 		{
