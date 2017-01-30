@@ -12,7 +12,6 @@ public abstract class BasePresenter : MonoBehaviour , IButtonListener
 	public void SetTransition (StateTransition transition)
 	{
 		this.transition = transition;	
-		view.SetTransition(transition);
 	}
 
 	public void Enter () 

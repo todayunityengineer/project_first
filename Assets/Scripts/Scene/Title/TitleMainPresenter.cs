@@ -19,7 +19,7 @@ public class TitleMainPresenter : BasePresenter
 	{
 		if (btnStart == btn) 
 		{
-			BaseController.LoadScene(E.Scenes.MyPage);
+			transition.ExecuteTransition(0);
  		}
 	}
 }

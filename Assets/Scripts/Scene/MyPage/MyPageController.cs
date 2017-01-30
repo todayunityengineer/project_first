@@ -10,6 +10,10 @@ public class MyPageController : BaseController
 
 	protected override void Init () 
 	{
-	//	ChangePresenter((int)State.Main, new StateTransition(new StateTransition.Transition(0, )));
+		presenters[(int)State.Main].SetTransition(new StateTransition(
+			new StateTransition.Transition(0, () => LoadScene(E.Scenes.Battle))
+		));
+
+		ChangePresenter((int)State.Main);
 	}
 }

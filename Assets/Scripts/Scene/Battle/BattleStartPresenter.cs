@@ -1,25 +1,21 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
 
-public class MyPageMainPresenter : BasePresenter 
+public class BattleStartPresenter : BasePresenter 
 {
-	[SerializeField] UIButton btnBattle;
-
 	protected override void OnEnter ()
 	{
-
+		view.SetData();
 	}
 
 	protected override void OnExit ()
 	{
-
+		view.SetDefault();
 	}
 
 	protected override void OnButtonClick (UIButton btn)
 	{
-		if (btn == btnBattle) 
-		{
-			transition.ExecuteTransition(0);
-		}	
+		
 	}
 }

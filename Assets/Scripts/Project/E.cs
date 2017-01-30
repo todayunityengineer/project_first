@@ -13,6 +13,7 @@ public class E
 		Blank = 0,
 		Title = 1,
 		MyPage = 2,
+		Battle = 3,
 	}
 
 	public enum Languages 

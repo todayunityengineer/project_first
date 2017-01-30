@@ -20,7 +20,7 @@ public abstract class BaseController : MonoBehaviour
 		}
 	}
 
-	public static void ChangePresenter (int a)
+	protected static void ChangePresenter (int a)
 	{
 		if (Instance.presentState != a)
 		{
@@ -33,7 +33,7 @@ public abstract class BaseController : MonoBehaviour
 		}
 	}
 
-	public static void LoadScene (E.Scenes nextScene)
+	protected static void LoadScene (E.Scenes nextScene)
 	{
 		string activeSceneName = SceneManager.GetActiveScene().name;
 		if (activeSceneName == E.Scenes.Blank.ToString())
@@ -60,7 +60,7 @@ public abstract class BaseController : MonoBehaviour
 		FadeClose();
 	}
 
-	[SerializeField] BasePresenter[] presenters;
+	[SerializeField] protected BasePresenter[] presenters;
 	int _presentState = -1;
 	protected int presentState { 
 		get{
