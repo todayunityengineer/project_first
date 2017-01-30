@@ -7,13 +7,21 @@ public abstract class BasePresenter : MonoBehaviour , IButtonListener
 
 	protected bool inThisState { get; private set; }
 
-	public void Enter (StateData datas) 
+	protected StateTransition transition { get; private set; }
+
+	public void SetTransition (StateTransition transition)
 	{
-		OnEnter(datas);	
+		this.transition = transition;	
+		view.SetTransition(transition);
+	}
+
+	public void Enter () 
+	{
+		OnEnter();	
 		inThisState = true;
 	}
 
-	protected abstract void OnEnter (StateData datas);
+	protected abstract void OnEnter ();
 
 	public void Exit () 
 	{

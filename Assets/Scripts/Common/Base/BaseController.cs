@@ -20,7 +20,7 @@ public abstract class BaseController : MonoBehaviour
 		}
 	}
 
-	public static void ChangePresenter (int a, StateData datas = null)
+	public static void ChangePresenter (int a)
 	{
 		if (Instance.presentState != a)
 		{
@@ -29,7 +29,7 @@ public abstract class BaseController : MonoBehaviour
 				Instance.presenters[Instance.presentState].Exit();
 			}
 			Instance.presentState = a;	
-			Instance.presenters[a].Enter(datas);
+			Instance.presenters[a].Enter();
 		}
 	}
 

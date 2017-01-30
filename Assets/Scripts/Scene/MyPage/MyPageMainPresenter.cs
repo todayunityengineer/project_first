@@ -3,7 +3,7 @@ using System.Collections;
 
 public class MyPageMainPresenter : BasePresenter {
 
-	protected override void OnEnter (StateData datas)
+	protected override void OnEnter ()
 	{
 
 	}

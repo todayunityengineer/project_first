@@ -10,6 +10,6 @@ public class MyPageController : BaseController
 
 	protected override void Init () 
 	{
-		ChangePresenter((int)State.Main);
+	//	ChangePresenter((int)State.Main, new StateTransition(new StateTransition.Transition(0, )));
 	}
 }

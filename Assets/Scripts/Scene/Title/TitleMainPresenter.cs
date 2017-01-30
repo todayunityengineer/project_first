@@ -5,7 +5,7 @@ public class TitleMainPresenter : BasePresenter
 {
 	[SerializeField]UIButton btnStart;
 
-	protected override void OnEnter (StateData datas)
+	protected override void OnEnter ()
 	{
 		view.SetData();
 	}

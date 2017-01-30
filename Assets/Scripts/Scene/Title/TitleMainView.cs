@@ -5,7 +5,7 @@ public class TitleMainView : BaseView
 {
 	[SerializeField] Animator animator;
 
-	public override void SetData (StateData datas)
+	public override void SetData ()
 	{
 		animator.SetTrigger(EnterAnimationName);
 	}
