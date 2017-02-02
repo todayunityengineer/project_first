@@ -13,7 +13,7 @@ public class PopupController : MonoBehaviour
 		if (instances.ContainsKey(name)) {
 			return Utility.SetParent(instances[name], parent).GetComponent<T>();
 		}else {
-			GameObject newInstance = Utility.Instantiate(Resources.Load("Prefabs/Popups/"+name) as GameObject, parent);
+			GameObject newInstance = Utility.Instantiate(Resources.Load(R.PopupPrefix +name) as GameObject, parent);
 			instances.Add(name, newInstance);
 			return newInstance.GetComponent<T>();
 		}

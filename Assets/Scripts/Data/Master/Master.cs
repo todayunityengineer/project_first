@@ -17,6 +17,8 @@ public static class Master
 		yield return new WaitForSeconds(1f);
 
 		m_localize.Load(masterType);
+		m_race.Load(masterType);
+		m_character.Load(masterType);
 	}
 
 	public static List<List<string>> GetCSV (string type)

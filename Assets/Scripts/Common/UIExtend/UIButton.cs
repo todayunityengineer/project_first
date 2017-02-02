@@ -7,9 +7,9 @@ public class UIButton : Button
 {
 	IButtonListener listener;
 
-	void Awake () 
+	void Start () 
 	{
-		base.Awake();
+		base.Start();
 
 		listener = transform.GetComponentInParent<IButtonListener>();
 		if (listener != null) onClick.AddListener(() => listener.ButtonClick(this));
